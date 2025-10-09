@@ -8,13 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>TI UNIMUS | HOME</title>
+    <title>Navy Club  | Hori</title>
 
     <title>{{ $title }}</title>
   </head>
-  <body>
-
-    <ul class="nav justify-content-center bg-red ">
+  <body class="bg-">
+<body>
+    <ul class="nav justify-content-center bg-dark white">
+  <li class="nav-item">
+ 
   <li class="nav-item">
     <a class="nav-link" href="/">Home</a>
   </li>
