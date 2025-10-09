@@ -18,7 +18,7 @@
   <li class="nav-item">
  
   <li class="nav-item">
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link {{ $title == 'home' ? 'active' : ''}}" href="/">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/profile">Profile</a>
