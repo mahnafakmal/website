@@ -12,7 +12,7 @@
 
     <title>{{ $title }}</title>
   </head>
-  <body class="bg-">
+  
 <body>
     <ul class="nav justify-content-center bg-dark white">
   <li class="nav-item">
