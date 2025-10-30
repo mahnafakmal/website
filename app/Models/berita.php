@@ -15,13 +15,11 @@ class berita extends Model
             "konten" => "Berita utama terkait BMW baru-baru ini berfokus pada kecelakaan yang melibatkan mobil BMW di Yogyakarta pada Mei 2025, di mana pengemudi bernama Christiano Tarigan ditetapkan sebagai tersangka setelah menabrak seorang mahasiswa hingga tewas, dan kejadian ini juga dikaitkan dengan dugaan penggantian plat nomor mobil. Selain itu, ada juga berita mengenai pembaruan teknologi dan fitur pada jajaran model BMW yang akan diluncurkan pada musim panas 2025, serta pembaruan pada SUV listrik BMW iX untuk model tahun 2026. ",
         ],
             [
-                "judul" => "Kost Mulet",
-                "slug" => "kost-mulet",
+                "judul" => "Kontrakan Mulet",
+                "slug" => "kontrakan-mulet",
                 "penulis" => "Urbun DKK",
-                "konten" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis debitis 
-                            et, optio perspiciatis totam distinctio nam, nesciunt iusto reprehe
-                            nderit inventore dignissimos, nulla voluptatem 
-                            xcepturi! Earum, natus soluta! Itaque, assumenda nihil!",
+                "konten" => "omaygatt tempat yang sangat nyaman dan tepat untuk bersenang senang, terdapat banyak flora fauna di dalamnya wajib berkunjung sihh, look like mini zoo,penghuninya baik dan mirip binatang, juga ada fans vardrid yang bangga2in 15 ucl padahal gapernah treble apalagi sixtuple
+                https://maps.app.goo.gl/sUd4vAjWYKWBcMTk9 ",
             ],
                  [
                     "judul" => "Unimus Tapak Suci Juara Satu",
