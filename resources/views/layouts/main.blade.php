@@ -55,6 +55,9 @@
             <li class="nav-item">
               <a class="nav-link {{ $title == 'kontak' ? 'active' : '' }}" href="/kontak">Kontak</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link {{ $title == 'kontak' ? 'active' : '' }}" href="/mahasiswa">Mahasiswa</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -68,7 +71,7 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p class="mb-0">© 2025 Navy Club | Designed by Hori</p>
+        <p class="mb-0">© 2025 Navy Club | Designed by Ahnaf</p>
       </div>
     </footer>
 

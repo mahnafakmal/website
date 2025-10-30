@@ -15,7 +15,7 @@ class MahasiswaController extends Controller
        
          $data = Mahasiswa::all();
 
-        return view('\mahasiswa', compact('data'), [
+        return view('mahasiswa', compact('data'), [
             "title" =>"Data Mahasiswa"
 
            
@@ -23,5 +23,20 @@ class MahasiswaController extends Controller
 
             
         ]);
+    }
+
+    public function tambahmahasiswa()
+    {
+        return view('tambahmahasiswa', 
+        [
+            "title" => "Tambah Data Mahasiswa"
+        ]);
+    }
+
+    public function insertdata(Request $request)
+    {
+            $data = Mahasiswa::create($request->all());
+
+           return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Ditambahkan!!!');
     }
 }
