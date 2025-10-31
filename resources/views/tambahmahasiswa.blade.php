@@ -1,4 +1,4 @@
-@extends('lyouts.main');
+@extends('layouts.main')
 
 @section('content')
 
@@ -15,7 +15,7 @@
   </div>
   <div class="mb-3">
     <label for="nim" class="form-label">Nomor Induk (Nim)</label>
-    <input type="number"name="nim"  placeholder="Nomor Induk Mahasiswa" class="form-control" >
+    <input type="number" name="nim"  placeholder="Nomor Induk Mahasiswa" class="form-control" >
 
   </div>
   <div class="mb-3">
@@ -24,11 +24,11 @@
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
-    <input type="email" name="email" placeholder="" class="form-control" >
+    <input type="email" name="email" placeholder="email" class="form-control" >
   </div>
   <div class="mb-3">
     <label for="nohp" class="form-label">Nomor Henpone (No HP)</label>
-    <input type="number" name="nohp" class="form-control" >
+    <input type="number" name="nohp" placeholder="Nomor Handphone" class="form-control" >
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
