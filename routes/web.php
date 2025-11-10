@@ -54,6 +54,7 @@ Route::post('/insertdata', [MahasiswaController::class, 'insertdata'] )->name('i
 Route::get('/kontak', function () {
     return view('kontak', [
         "title" => "Kontak",
+        "img" => "img/anaf.png"
     ]);
 });
 
