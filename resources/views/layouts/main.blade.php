@@ -12,18 +12,49 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
       crossorigin="anonymous">
 
-    <title>{{ $title ?? 'Navy Club | Hori' }}</title>
+    <title>{{ $title ?? 'Hori Club | Hori' }}</title>
 
     <style>
+       .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-inner {
+            width: 35px;
+            height: 35px;
+            background-color: #000000ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+            text-align: center;
+            line-height: 1.1;
+        }
       body {
-        background-color: #f8f9fa;
+        background-color: #ffffffff;
       }
       .navbar-nav .nav-link.active {
         font-weight: bold;
         color: #ffc107 !important;
       }
       footer {
-        background-color: #343a40;
+        background-color: #212428ff;
         color: white;
         text-align: center;
         padding: 15px 0;
@@ -36,7 +67,13 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand font-weight-bold" href="/">Navy Club</a>
+        <a class="navbar-brand" href="{{ url('/') }}">
+                <div class="logo">
+                    <div class="logo-inner">HC</div>
+                </div>
+                </a>
+        <a class="navbar-brand font-weight-bold" href="/">Hori Club</a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -71,7 +108,7 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p class="mb-0">© 2025 Navy Club | Designed by Ahnaf</p>
+        <p class="mb-0">© 2025 Hori Club | Designed by Ahnaf</p>
       </div>
     </footer>
 

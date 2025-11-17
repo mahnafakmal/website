@@ -18,8 +18,8 @@ class berita extends Model
                 "judul" => "Kontrakan Mulet",
                 "slug" => "kontrakan-mulet",
                 "penulis" => "Urbun DKK",
-                "konten" => "omaygatt tempat yang sangat nyaman dan tepat untuk bersenang senang, terdapat banyak flora fauna di dalamnya wajib berkunjung sihh, look like mini zoo,penghuninya baik dan mirip binatang, juga ada fans vardrid yang bangga2in 15 ucl padahal gapernah treble apalagi sixtuple
-                https://maps.app.goo.gl/sUd4vAjWYKWBcMTk9 ",
+                "konten" => "omaygatt tempat yang sangat nyaman dan tepat untuk bersenang senang, terdapat banyak flora fauna di dalamnya wajib berkunjung sihh, look like mini zoo,penghuninya baik dan mirip binatang, juga ada fans vardrid yang bangga2in 15 ucl padahal gapernah treble apalagi sixtuple",
+                 
             ],
                  [
                     "judul" => "Unimus Tapak Suci Juara Satu",

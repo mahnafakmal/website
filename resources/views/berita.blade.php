@@ -11,6 +11,7 @@
     </h2></a>
     <h3>{{ $berita ['penulis' ]}}</h3>
     <p>{{ $berita ['konten']}}</p>
+
   @endforeach
 
 </article>
