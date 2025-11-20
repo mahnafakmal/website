@@ -16,7 +16,7 @@ class MahasiswaSeeder extends Seeder
             'name' => "Kafalah budi",
             'nim' => 12241510011,
             'prodi' => "Teknologi Informasi",
-            'email' => "kafalah.com",
+            'email' => "kafalah @gmail.com",
             'nohp' => 6219273917301,
         ]);
     }
