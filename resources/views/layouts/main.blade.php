@@ -20,32 +20,11 @@
             align-items: center;
             gap: 15px;
         }
-        
-        .logo {
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .logo-inner {
-            width: 35px;
-            height: 35px;
-            background-color: #000000ff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-weight: bold;
-            font-size: 10px;
-            text-align: center;
-            line-height: 1.1;
-        }
+          .logo-image {
+          width: 80px;
+          height: 60px;
+          object-fit: contain;
+      }
       body {
         background-color: #ffffffff;
       }
@@ -67,11 +46,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-                <div class="logo">
-                    <div class="logo-inner">HC</div>
-                </div>
-                </a>
+     <a class="navbar-brand" href="{{ url('/') }}">
+    <img src="{{ asset('img/logo.png') }}" alt="Hori Club Logo" class="logo-image">
+    </a>
         <a class="navbar-brand font-weight-bold" href="/">Hori Club</a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
