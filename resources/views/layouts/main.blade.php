@@ -18,11 +18,12 @@
        .navbar-brand {
             display: flex;
             align-items: center;
+            
             gap: 15px;
         }
           .logo-image {
-          width: 80px;
-          height: 60px;
+          width: 70px;
+          height: 65px;
           object-fit: contain;
       }
       body {
@@ -33,7 +34,7 @@
         color: #ffc107 !important;
       }
       footer {
-        background-color: #212428ff;
+        background-color: #444444ff;
         color: white;
         text-align: center;
         padding: 15px 0;
