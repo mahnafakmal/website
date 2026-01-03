@@ -47,7 +47,7 @@
       <td>{{$mahasiswa["nohp"]}}</td>
       <td>
         <a href="tampildata/{{ $mahasiswa ['id']}}"  class="btn btn-primary">Edit  </a>
-        <a href="#" class="btn btn-danger delete" data-id="{{ $mahasiswa['id'] }}" >Hapus</a>
+        <a href="#" class="btn btn-danger delete" data-id="{{ $mahasiswa['id'] }}">Hapus</a>
         
       </td>
       <?php $i++ ?>
@@ -82,7 +82,7 @@
           confirmButtonText: "Yes, delete it!"
         }).then((result) => {
           if (result.isConfirmed) {
-                window.location = "/deletedata/" + id;
+                window.location = "/deletedata/" +id;
           }
           });
      });
