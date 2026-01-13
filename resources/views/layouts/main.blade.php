@@ -15,30 +15,59 @@
     <title>{{ $title ?? 'Hori Club | Hori' }}</title>
 
     <style>
-       .navbar-brand {
-            display: flex;
-            align-items: center;
-            
-            gap: 15px;
-        }
-          .logo-image {
-          width: 70px;
-          height: 65px;
-          object-fit: contain;
+      html, body {
+        height: 100%;
+        margin: 0;
       }
+      
       body {
+        display: flex;
+        flex-direction: column;
         background-color: #ffffffff;
       }
+      
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      .logo-image {
+        width: 70px;
+        height: 65px;
+        object-fit: contain;
+      }
+      
       .navbar-nav .nav-link.active {
         font-weight: bold;
         color: #ffc107 !important;
       }
+      
+      /* Main content akan mengisi ruang yang tersisa */
+      .main-content {
+        flex: 1 0 auto;
+      }
+      
       footer {
+        flex-shrink: 0;
         background-color: #444444ff;
         color: white;
         text-align: center;
         padding: 15px 0;
         margin-top: 40px;
+      }
+      
+      .btn-link.nav-link {
+        color: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .btn-link.nav-link:hover {
+        color: rgba(255, 255, 255, 0.75);
       }
     </style>
   </head>
@@ -47,9 +76,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-     <a class="navbar-brand" href="{{ url('/') }}">
-    <img src="{{ asset('img/logo.png') }}" alt="Hori Club Logo" class="logo-image">
-    </a>
+        <a class="navbar-brand" href="{{ url('/') }}">
+          <img src="{{ asset('img/logo.png') }}" alt="Hori Club Logo" class="logo-image">
+        </a>
         <a class="navbar-brand font-weight-bold" href="/">Hori Club</a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -58,29 +87,64 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link {{ $title == 'home' ? 'active' : '' }}" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {{ $title == 'profile' ? 'active' : '' }}" href="/profile">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {{ $title == 'berita' ? 'active' : '' }}" href="/berita">Berita</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {{ $title == 'kontak' ? 'active' : '' }}" href="/kontak">Kontak</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {{ $title == 'kontak' ? 'active' : '' }}" href="/mahasiswa">Mahasiswa</a>
-            </li>
+            @auth
+              <li class="nav-item">
+                <a class="nav-link {{ $title == 'home' ? 'active' : '' }}" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ $title == 'profile' ? 'active' : '' }}" href="/profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ $title == 'berita' ? 'active' : '' }}" href="/berita">Berita</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ $title == 'kontak' ? 'active' : '' }}" href="/kontak">Kontak</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ $title == 'mahasiswa' ? 'active' : '' }}" href="/mahasiswa">Mahasiswa</a>
+              </li>
+              <li class="nav-item">
+                <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                  @csrf
+                  <button type="submit" class="btn btn-link nav-link">Logout</button>
+                </form>
+              </li>
+            @else
+              <li class="nav-item">
+                <a class="nav-link {{ $title == 'login' ? 'active' : '' }}" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ $title == 'register' ? 'active' : '' }}" href="/register">Register</a>
+              </li>
+            @endauth
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5 mb-5">
-      @yield('content')
+    <div class="main-content">
+      <div class="container mt-5 mb-5">
+        @if(session('success'))
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        @endif
+
+        @if(session('error'))
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('error') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        @endif
+
+        @yield('content')
+      </div>
     </div>
 
     <!-- Footer -->
