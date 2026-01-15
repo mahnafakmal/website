@@ -47,7 +47,9 @@
       <td>{{$mahasiswa["nohp"]}}</td>
       <td>
         <a href="tampildata/{{ $mahasiswa ['id']}}"  class="btn btn-primary">Edit  </a>
-        <a href="#" class="btn btn-danger delete" data-id="{{ $mahasiswa['id'] }}">Hapus</a>
+              <a href="#" class="btn btn-danger delete" 
+                  data-id="{{ $mahasiswa['id'] }}" 
+                  data-name="{{ $mahasiswa['name'] }}">Hapus</a>
         
       </td>
       <?php $i++ ?>
@@ -70,7 +72,7 @@
     $('.delete').click(function(){
 
       let id = $(this).attr('data-id');
-      let name = $(this).attr('data-nama');
+      let name = $(this).attr('data-name');
 
           Swal.fire({
           title: "Are you sure?",
